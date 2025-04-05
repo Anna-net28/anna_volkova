@@ -16,6 +16,6 @@ git config --global core.autocrlf true
 git init
 git status
 git add .
-git commit -m "pro"
+git commit -m "footer"
 git diff --color-words
 git push
