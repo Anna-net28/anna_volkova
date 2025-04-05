@@ -34,7 +34,7 @@
       </nav>
 
       <div class="header__contact">
-        <a href="tel:8 (900) 777-77-77" class="contacts__link">8 (900) 777-77-77
+        <a href="tel:8(900)777-77-77" class="contacts__link">8 (900) 777-77-77
         </a>
         <div class="header__button button-btn">
           <a href="#popup" class="header__btn order">Заказать звонок</a>
@@ -52,13 +52,13 @@
       <div class="slider">
         <div class="slider__item"><img src="img/image57.png" alt="" class="slider__img"></div>
         <div class="slider__item"><img src="img/image57.png" alt="" class="slider__img"></div>
-        <div class="slider__item"><img src="img/image 59.png" alt="" class="slider__img"></div>
+        <div class="slider__item"><img src="img/image57.png" alt="" class="slider__img"></div>
       </div>
     </div>
   </header>
 
   <main class="main">
-    <section class="breadcrumbs">
+    <div class="breadcrumbs">
       <div class="breadcrumbs__container container">
         <nav class="breadcrumbs__nav">
           <ul class="breadcrumbs__menu">
@@ -66,12 +66,12 @@
               <a href="#" cLass="breadcrumb__link">Главная</a>
               <a href="#" cLass="breadcrumb__link">Каталог</a>
               <a href="#" cLass="breadcrumb__link">Зерновозы</a>
-              <p href="#" cLass="breadcrumb__text text">Зерновозы бортовые 46-60 м3 с вынесенной осью</p>
+              <p cLass="breadcrumb__text text">Зерновозы бортовые 46-60 м3 с вынесенной осью</p>
             </li>
           </ul>
         </nav>
       </div>
-    </section>
+    </div>
     <section class="characteristic">
       <div class="characteristic__container container">
 
@@ -162,7 +162,6 @@
         </div>
       </div>
 
-
       <aside class="application">
         <div class="application__sidebar">
           <ul class="application__list">
@@ -186,6 +185,7 @@
               <a class="application__text bold">Технические характеристики</a>
             </li>
           </ul>
+          
           <div class="application__btn btn">
             <a class="application__link-btn link" href="#" target="_blank">Оставить заявку</a>
             <button class="application__button button" type="submit"><img src="img/uparrow.svg" alt=""
@@ -199,11 +199,7 @@
           </div>
         </div>
       </aside>
-
-
     </section>
-
-
 
     <section class="delivery">
       <div class="delivery__container container">
@@ -280,7 +276,6 @@
       <div class="assortment__container container">
         <div class="assortment__block">
           <h4 class="assortment__title heading">Может быть интересно</h4>
-
           <div class="assortment__card">
             <div class="slides">
               <div class="slides__item">
@@ -435,7 +430,7 @@
             <div class="feedback__elems">
               <div class="feedback__left">
                 <picture>
-                  <img src="img/image 59.png" alt="" class="feedback__img">
+                  <img src="img/image59.png" alt="" class="feedback__img">
                 </picture>
               </div>
               <div class="feedback__right">
@@ -454,7 +449,7 @@
             <div class="feedback__elems">
               <div class="feedback__left">
                 <picture>
-                  <img src="img/image 59.png" alt="" class="feedback__img">
+                  <img src="img/image59.png" alt="" class="feedback__img">
                 </picture>
               </div>
               <div class="feedback__right">
@@ -469,7 +464,7 @@
             <div class="feedback__elems">
               <div class="feedback__left">
                 <picture>
-                  <img src="img/image 59.png" alt="" class="feedback__img">
+                  <img src="img/image59.png" alt="" class="feedback__img">
                 </picture>
               </div>
 
@@ -550,7 +545,7 @@
           <div class="footer__contacts">
             <div class="">
               <p class="contacts__tex textt">Контакты:</p>
-              <a href="tel:8 (900) 777-77-77" class="contacts__link white text">8 (900) 777-77-77
+              <a href="tel:8(900)777-77-77" class="contacts__link white text">8 (900) 777-77-77
               </a>
               <a href="mailto:info@braver.ru" class="contacts__link white text">info@braver.ru</a>
             </div>
@@ -592,10 +587,7 @@
           <li class="footer__item"><a href="#" class="footer__link text">Trade-In</a></li>
         </ul>
 
-        <iframe src="https://yandex.ru/sprav/widget/rating-badge/1176587986?type=rating&theme=dark" frameborder="0"
-          theme='dark' class="star-rating">
-        </iframe>
-
+        <iframe src="https://yandex.ru/sprav/widget/rating-badge/1176587986?type=rating&theme=dark" frameborder="0"></iframe>
 
         <div class="footer__social">
           <ul class="social__list">
@@ -649,15 +641,12 @@
             <input class="popup__input input" type="tel" name="phone" placeholder="+7 (952) - 664 - 77 - 23" required
               title="+7-___-___-__-__" pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$">
             <input class="popup__input input" type="text" name="name" placeholder="Название компании" required>
-            <label for="checkbox" class="popup__label label">
           </div>
 
-          <label for="checkbox" class="popap__label label">
-            <input class="popup__input checkbox" id="checkbox" type="checkbox" name="our halls"
+          <label for="checkboxes" class="popap__label label">
+            <input id="checkboxes" class="popup__input checkbox" type="checkbox" name="our halls"
               value="PlayStation">Нажимая на кнопку, я принимаю условия <span class="popup__text check">Политики
-              конфиденциальности
-            </span></label>
-
+              конфиденциальности</span></label>
 
           <div class="popup__btn btn">
             <a class="popup__link-btn link" href="#" target="_blank">Отправить</a>
