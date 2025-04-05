@@ -1,0 +1,40 @@
+.assortment {
+    margin-top: 40px;
+}
+
+.assortment__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card__description {
+    border-radius: 8px;
+    background: rgb(244, 244, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 325px;
+}
+
+.card__title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(32, 32, 32, 0.1);
+}
+
+@media (max-width:452px){
+	
+}

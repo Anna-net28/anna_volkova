@@ -1,0 +1,23 @@
+.breadcrumbs {
+}
+.characteristic__nav {
+}
+.breadcrumbs__menu {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.breadcrumb__link {
+    color: rgba(32, 32, 32, 0.4);
+font-size: 18px;
+font-weight: 400;
+line-height: 90%;
+text-align: left;
+}
+
+.breadcrumb__link::after {
+    content: url("..//img/arowwbreadcrumbs.svg");
+    padding-left: 0.3rem;
+
+}
