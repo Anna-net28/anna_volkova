@@ -222,7 +222,6 @@
     .footer__mail-img {
         grid-column: 1 / 3;
         grid-row: 7 / 8;
-    }
 
     }
     .footer__done {
@@ -232,11 +231,11 @@
     
     .footer__copy {
         grid-column: 1 / 2;
-        grid-row: 7 / 8;
+        grid-row: 8 / 9;
     }
     
     .footer__confidentiality {
         grid-column: 2 / 4;
-        grid-row: 7 / 8;
+        grid-row: 8 / 9;
     }
 }
