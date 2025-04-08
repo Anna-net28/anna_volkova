@@ -7,13 +7,13 @@
 .characteristic__block {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
 }
 
 .characteristic-group__description {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 .characteristic-group__text {
@@ -24,42 +24,71 @@
     text-align: left;
 }
 
-.specifications__menu {
+.characteristic-group__specifications {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+.specifications__menu {
     border-radius: 8px;
     background: rgb(244, 244, 244);
-    padding: 0.6rem 2rem;
-}
-
-.specifications__item {
-    list-style: disc;
-}
-
-.specifications__item:active {
-    list-style: disc;
-    border-radius: 8px;
-    background: rgb(32, 32, 32);
-    padding: 12px 40px;
-    color: var(--color-f);
-}
-
-.specifications__link {
-    color: rgba(32, 32, 32, 0.4);
-    font-size: var(--texst-size-m);
-    font-weight: 500;
-    line-height: 90%;
-    text-align: center;
+    padding: 0.6rem 1rem;
 }
 
 .specifications__list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
     border-radius: 8px;
     padding: 1rem;
     background: rgb(244, 244, 244);
+}
+
+.nav.nav-tabs {
+    display: flex;
+    gap: 2.3rem;
+}
+
+.nav-tabs>li {
+    float: left;
+    list-style-type: disc;
+}
+
+.nav-tabs>li>a {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    line-height: 1.5rem;
+    color: rgba(32, 32, 32, 0.4);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 90%;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.specifications__item::marker.active {
+    background: rgb(32, 32, 32);
+}
+
+.nav-tabs>.active>a,
+.nav-tabs>.active>a:focus,
+.nav-tabs>.active>a:hover {
+    color: var(--color-f);
+    border-radius: 8px;
+    background: rgb(32, 32, 32);
+    padding: 0.6rem 1rem;
+}
+
+.tab-content {
+    width: 100%;
+    display: block;
+}
+
+.tab-content .tab-pane {
+    display: none;
+    padding: 1rem 0;
+}
+
+.tab-content>.tab-pane.active {
+    display: block;
 }
 
 .specifications__line {
@@ -85,16 +114,23 @@
     text-align: right;
 }
 
+@media screen and (max-width: 1200px) {
+
+    .specifications__menu {
+       padding: 0.6rem 0.5rem;
+    }
+
+    .nav.nav-tabs {
+        gap: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+}
 
 @media screen and (max-width: 768px) {
 
     .characteristic {
         grid-template: 1fr / 1fr;
-        
     }
-   
-    .application {
-        grid-row: 1 / 2;
-    }
-    
 }

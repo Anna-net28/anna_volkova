@@ -32,78 +32,78 @@ if
     }, 1000);
 };
 
-	$(document).ready(function(){
-			$('.slider').slick({
-                arrows:true,
-                dots:true,
-                slidesToShow:2,
-                responsive:[
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow:2
-                        }
-                    },
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            slidesToShow:1
-                        }
-                    }
-                ]
-		});
-        $(".slides").slick({
-            arrows:true,
-                dots:true,
-                slidesToShow:3,
-                responsive:[
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow:2
-                        }
-                    },
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            slidesToShow:1
-                        }
-                    }
-                ]
-          });
-	
-	});
+$(document).ready(function () {
+    $('.slider').slick({
+        arrows: true,
+        dots: true,
+        slidesToShow: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $(".slides").slick({
+        arrows: true,
+        dots: true,
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+});
 
 
 
-const popupLinks = document.querySelectorA11('.popup-link');
+const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorA11('.lock-padding');
+const lockPadding = document.querySelectorAll('.lock-padding');
 let unlock = true;
 
 const timeout = 800;
 
-if (popupLinks.length > 0) { 
+if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
-const popupLink = popupLinks[index];
-popupLink.addEventListener("click", function (e) {
-const popupName = popupLink.getAttribute ('href').replace('#', '');
-const curentPopup = document.getElementById(popupName) ;
-popupOpen(curentPopup);
-e.preventDefault();
-});
+        const popupLink = popupLinks[index];
+        popupLink.addEventListener("click", function (e) {
+            const popupName = popupLink.getAttribute('href').replace('#', '');
+            const curentPopup = document.getElementById(popupName);
+            popupOpen(curentPopup);
+            e.preventDefault();
+        });
     }
 }
 
-const popupCloseIcon = document.querySelectorA11('.close-popup');
-if (popupCloselcon.length > 0) {
-for (let index = 0; index < popupCloseIcon.length; index++) {
-const el = popupCloseIcon[index];
-el.addEventListener('click', function (e) {
-    popupClose(el.closest('.popup'));
-    e.preventDefault();
-})
-}
+const popupCloseIcon = document.querySelector('.close-popup');
+if (popupCloseIcon.length > 0) {
+    for (let index = 0; index < popupCloseIcon.length; index++) {
+        const el = popupCloseIcon[index];
+        el.addEventListener('click', function (e) {
+            popupClose(el.closest('.popup'));
+            e.preventDefault();
+        })
+    }
 }
 
 function popupOpen(curentPopup) {
@@ -112,7 +112,7 @@ function popupOpen(curentPopup) {
         if (popupActive) {
             popupClose(popupActive, false);
 
-        }else{
+        } else {
             bodyLock();
         }
         curentPopup.classList.add('open');
@@ -138,7 +138,7 @@ function bodyLock() {
     const lockPaddingValue = window.innerWidth - document.querySelector('wrapper').offsetWidrh + 'px';
 
     for (let index = 0; index < lockPadding.length; index++) {
-        const el =lockPadding[index];
+        const el = lockPadding[index];
         el.style.paddingRight = lockPaddingValue;
     }
     body.style.paddingRight = lockPaddingValue;
@@ -147,30 +147,30 @@ function bodyLock() {
     unlock = false;
     setTimeout(function () {
         unlock = true;
-    
+
     }, timeout);
 
-function bodyUnLock() {
-    setTimeout(function () {
-        for (let index = 0; index < lockPadding.length; index++) {
-            constel = lockPadding[index];
-            el.style.paddingRight = '0px';
-        } 
-          body.style.paddingRight = '0px';
-          body.classList.remove('lock');
+    function bodyUnLock() {
+        setTimeout(function () {
+            for (let index = 0; index < lockPadding.length; index++) {
+                constel = lockPadding[index];
+                el.style.paddingRight = '0px';
+            }
+            body.style.paddingRight = '0px';
+            body.classList.remove('lock');
 
         }, timeout);
     }
 
-unlock = false;
-setTimeout(function () {
-    unlock = true;
-}, timeout);
-  
-} 
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+
+}
 
 document.addEventListener('keydown', function (e) {
-    if (e.which ===27) {
+    if (evt.which === 27) {
         const popupActive = document.querySelector('.popup.open');
         popupClose(popupActive);
     }
@@ -179,10 +179,15 @@ document.addEventListener('keydown', function (e) {
 (function () {
     if (!Element.prototype.matches) {
         Element.prototype.matches = Element.prototype.matchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.mozMatchesSelector;
+            Element.prototype.Element.matches() ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.mozMatchesSelector;
     }
 })()
 
-  
+$('.nav.nav-tabs li').click(function () {
+    $('.nav.nav-tabs li').removeClass('active');
+    $(this).addClass('active');
+    $(this).parent('.nav.nav-tabs').next('.tab-content').find('.tab-pane').removeClass('active');
+    $($(this).find('a').attr('data-href')).addClass('active');
+});

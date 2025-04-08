@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src:url('../font/helvetica_regular.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/HelveticaNeue-Bold.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/HelveticaNeue-Medium.otf') format('otf');
+}
 * {
     box-sizing: border-box;
 }
@@ -11,7 +25,7 @@ body {
 
     line-height: 28px;
     color: var(--text-color);
-    font-family: 'Prata', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 18px;
     margin: 0;
     background-color: var(--color-f);
@@ -38,7 +52,7 @@ p {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: Arial, 'Prata', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 ul,
@@ -122,6 +136,10 @@ fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
 
+summary {
+    list-style: none;
+}
+
 legend {
     box-sizing: border-box;
     color: inherit;
@@ -178,7 +196,6 @@ textarea {
 
 .title {
     color: rgb(32, 32, 32);
-    font-family: Helvetica Neue;
     font-size: 20px;
     font-weight: 500;
     line-height: 100%;
@@ -268,7 +285,6 @@ textarea {
 
 .order {
     color: var(--color-a);
-    font-family: Helvetica Neue;
     font-size: var(--texst-size-c);
     font-weight: 500;
     line-height: 22px;
@@ -298,7 +314,6 @@ textarea {
 
 .language__link {
     color: #FFFFFF99;
-    font-family: Helvetica Neue;
     font-size: var(--texst-size-c);
     font-weight: 400;
     line-height: 21px;
@@ -307,7 +322,6 @@ textarea {
 }
 
 .text {
-    font-family: Helvetica Neue;
     font-size: var(--texst-size-c);
     font-weight: 500;
     line-height: 90%;

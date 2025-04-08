@@ -52,10 +52,26 @@
     display: flex;
 }
 
-@media screen and (max-width: 1300px) {
-    .header__top {
-        padding: 0.5rem;
-    }
+@media screen and (max-width: 1400px) {
+.header__top {
+    padding: 0.5rem;
+}
+.header__img {
+    max-width: 140px;
+}
+.menu__list {
+    gap: 0.3rem;
+}
+
+.header__contact {
+    gap: 0.3rem;
+}
+.header__button {
+    padding: 0.3rem;
+    height: auto;
+}
+
+@media screen and (max-width: 1142px) {
 
     .header__contact {
         display: none;
@@ -135,12 +151,6 @@
         padding: 40% 10%;
         gap: 1rem;
         background: var(--color-n);
-    }
-
-    .active {
-        position: fixed;
-        top: 3%;
-        right: 7%;
     }
 
     .menu__link {
